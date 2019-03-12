@@ -1,0 +1,11 @@
+{% extends "base.html"%}
+{% block content%}
+    <meta charset="UTF-8">
+    <h1>PGMANAGER creation</h1>
+    <h4>{{ message }}</h4>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" name="" value="create">
+    </form>
+{% endblock %}
